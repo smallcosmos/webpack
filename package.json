@@ -1,0 +1,25 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "my webpack demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smallcosmos/webpack.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "linxingjian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smallcosmos/webpack/issues"
+  },
+  "homepage": "https://github.com/smallcosmos/webpack#readme",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
