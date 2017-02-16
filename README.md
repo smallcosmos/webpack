@@ -22,6 +22,16 @@
 
   [webpack.github.io](http://webpack.github.io/docs/usage.html)
 
+###RUN DEMO
+
+  1. download my demo and put it in /www directory
+
+  2. `npm install`
+
+  3. `npm run webpack`
+
+  4. open **localhost/webpack/index.html** in browse, you may find infomation in console(F12)
+  
 ### MORE
 
   [my blog]()
