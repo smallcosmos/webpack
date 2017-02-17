@@ -17,4 +17,11 @@ console.log("Array.from: ", testArray); //[undefined, "a"]
 
 //test css-loader and style-loader
 require("./static/reset.css");
-require("./static/style.css");
+require("./static/style.css"); //background image
+
+//test json-loader
+let account = require("./static/account.json");
+console.log(account.name); //linxingjian
+
+//test webpack.DefinePlugin
+__DEV__ ? console.log("DEBUG MODE"): console.log("RELEASE MODE");
