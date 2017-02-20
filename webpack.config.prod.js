@@ -43,5 +43,13 @@ module.exports = {
 			//export DEBUG=true
 			__DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || false))
 		})
-	]
+	],
+	externals: {
+		//allows you to specify dependencies for your library that are not resolved by webpack, but become dependencies of the output
+		//You can use the externals option to import an existing API into applications. 
+		//'_jQuery': false  => require('_jQuery') is not externals. so, make sure module _jQuery is included in the bundle.
+		//'_jQuery': true => require('_jQuery') is externals, and bundled like this: module.exports = _jQuery. so, make sure _jQuery is available in the global context.
+		//'_jQuery': '_$' = > require('_JQuery') is externals, and bundled like this: module.exports = _$
+		'_jQuery': '_$'
+	}
 }

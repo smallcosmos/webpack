@@ -21,7 +21,12 @@ require("./static/style.css"); //background image
 
 //test json-loader
 let account = require("./static/account.json");
-console.log(account.name); //linxingjian
+console.log("json-loader: ", account.name); //linxingjian
 
 //test webpack.DefinePlugin
 __DEV__ ? console.log("DEBUG MODE"): console.log("RELEASE MODE");
+
+//test externals
+window._$ = "this is not jQuery";
+var data = require("_jQuery");
+console.log("externals: ", data);
