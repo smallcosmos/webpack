@@ -33,3 +33,20 @@ console.log("externals: ", data);
 
 //test jQuery
 console.log("jquery version: ", $().jquery);
+
+//test react demo1
+ReactDOM.render(
+	<h1>Hello world!</h1>,
+	$(".main-wrap").get(0)
+);
+
+//test react demo2
+var names = ['Alice', 'Emily', 'Kate'];
+ReactDOM.render(
+	<div>
+	{
+		names.map(name => <div>Hello, {name}!</div>)
+	}
+	</div>,
+	$(".main-wrap").get(0)
+)

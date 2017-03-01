@@ -45,12 +45,14 @@ module.exports = {
 		]
 	},
 	plugins: [
-		// another way to use jquery
-		// new webpack.ProvidePlugin({
-		// 	"$": "jquery",
-		// 	"jQuery": "jquery",
-		// 	"window.jQuery": "jquery"
-		// }),
+		// another way to use plugin, like imports-loader
+		new webpack.ProvidePlugin({
+			// "$": "jquery",
+			// "jQuery": "jquery",
+			// "window.jQuery": "jquery",
+			"ReactDOM": "react-dom",
+			"React": "react"
+		}),
 		// new webpack.HotModuleReplacementPlugin(),
 		// new webpack.optimize.UglifyJsPlugin({
 		// 	compress: {
