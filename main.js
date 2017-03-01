@@ -30,3 +30,6 @@ __DEV__ ? console.log("DEBUG MODE"): console.log("RELEASE MODE");
 window._$ = "this is not jQuery";
 var data = require("_jQuery");
 console.log("externals: ", data);
+
+//test jQuery
+console.log("jquery version: ", $().jquery);

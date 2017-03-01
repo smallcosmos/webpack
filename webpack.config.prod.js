@@ -1,5 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
+
+// var htmlwebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	entry: {
 		bundle: "./main.js"
@@ -32,10 +34,29 @@ module.exports = {
 				test: /\.js$/,
 				loader: 'es3ify-loader',
 				enforce: 'post'
+			},
+			{
+				//use npm view jquery versions to view all versions of jquery, choose 1.12.4 for ie8 compability
+				//use npm install jquery@1.12.4 --save-dev to download jquery
+				//use npm install imports-loader to download imports-loader
+				test: /\.js$/,
+				loader: 'imports-loader?$=jquery&jQuery=jquery'
 			}
 		]
 	},
 	plugins: [
+		// another way to use jquery
+		// new webpack.ProvidePlugin({
+		// 	"$": "jquery",
+		// 	"jQuery": "jquery",
+		// 	"window.jQuery": "jquery"
+		// }),
+		// new webpack.HotModuleReplacementPlugin(),
+		// new webpack.optimize.UglifyJsPlugin({
+		// 	compress: {
+		// 		warnings: false
+		// 	}
+		// }),
 		new webpack.DefinePlugin({
 			//windows
 			//set DEBUG=true
