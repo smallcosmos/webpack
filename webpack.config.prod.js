@@ -15,7 +15,7 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-				loader: 'babel-loader',
+				loader: ['babel-loader', 'eslint-loader'],
 				exclude: /node_modules/
 			},
 			{
@@ -40,7 +40,7 @@ module.exports = {
 				//use npm install jquery@1.12.4 --save-dev to download jquery
 				//use npm install imports-loader to download imports-loader
 				test: /\.js$/,
-				loader: 'imports-loader?$=jquery&jQuery=jquery'
+				loader: 'imports-loader?$=jquery'
 			}
 		]
 	},
@@ -50,8 +50,8 @@ module.exports = {
 			// "$": "jquery",
 			// "jQuery": "jquery",
 			// "window.jQuery": "jquery",
-			"ReactDOM": "react-dom",
-			"React": "react"
+			ReactDOM: 'react-dom',
+			React: 'react'
 		}),
 		// new webpack.HotModuleReplacementPlugin(),
 		// new webpack.optimize.UglifyJsPlugin({
@@ -73,6 +73,6 @@ module.exports = {
 		//'_jQuery': false  => require('_jQuery') is not externals. so, make sure module _jQuery is included in the bundle.
 		//'_jQuery': true => require('_jQuery') is externals, and bundled like this: module.exports = _jQuery. so, make sure _jQuery is available in the global context.
 		//'_jQuery': '_$' = > require('_JQuery') is externals, and bundled like this: module.exports = _$
-		'_jQuery': '_$'
+		_jQuery: '_$'
 	}
 }
