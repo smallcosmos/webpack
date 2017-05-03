@@ -10,6 +10,9 @@
     "eslint": "eslint main.js",
     "eslint:fix": "eslint --fix main.js"
   },
+  "pre-commit": [
+    "eslint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/smallcosmos/webpack.git"
@@ -40,6 +43,7 @@
     "imports-loader": "^0.7.1",
     "jquery": "^1.12.4",
     "json-loader": "^0.5.4",
+    "pre-commit": "^1.2.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "style-loader": "^0.13.1",

@@ -82,7 +82,7 @@
         // while (foo) {
         // }
         "no-empty": 2,
-        "no-empty-function": 0, // warning 空函数
+        "no-empty-function": 2, // warning 空函数
         // 禁止在 return、throw、continue 和 break 语句之后出现不可达代码
         /*
         function foo() {
